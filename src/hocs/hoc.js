@@ -1,5 +1,5 @@
 import React from 'react'
-const _ = require('lodash')
+import _ from 'lodash';
 
 const Hoc = WrappedComponent => {
   const users = ['User1', 'User2', 'User3', 'User4', 'User5', 'User6']
@@ -17,7 +17,7 @@ const Hoc = WrappedComponent => {
 
   return props => (
     <div className='userBlock'>
-      <WrappedComponent text={user} />
+      <WrappedComponent  {...props} text={user}/>
     </div>
   )
 }
